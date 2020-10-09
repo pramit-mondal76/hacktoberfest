@@ -1,5 +1,6 @@
 # Hacktoberfest website
-Hacktoberfest 2020 repo for fun and games.
+## Hacktoberfest 2020 repo for fun and games.
+
 Visit https://matteomessmer.github.io/hacktoberfest/
 
 ![Image of Hacktoberfest](https://repository-images.githubusercontent.com/200877850/a3998700-e181-11ea-86c2-0bff8811ded4)
