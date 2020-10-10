@@ -14,7 +14,7 @@ I want to make a website with a OSM map to display from where the contributors c
 2) Comment the issue when you want to work on it
 3) Fork the repo
 4) Make a branch 
-    - Commit and push the chenges
+    - Commit and push the changes
 5) Make a pull request
 
 Feel free to contribute to this repo. 
