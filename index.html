@@ -1,12 +1,21 @@
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hacktoberfest 2020</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
 <body>
-	<h1>Hacktoberfest 2020</h1>
-  <div id="osmMap"></div>
-  <script src="js/OpenLayers.js"></script>
-  <script>
+<div class="wrapper">
+    <h1>OPEN SOURCE STREET MAP</h1>
+</div>
+<div id="osmMap"></div>
+<script src="js/OpenLayers.js"></script>
+<script>
     map = new OpenLayers.Map("osmMap");
     map.addLayer(new OpenLayers.Layer.OSM());
     map.zoomToMaxExtent();
-  </script>
+</script>
 </body>
 </html>
