@@ -1,5 +1,5 @@
-# Hacktoberfest website
-## Hacktoberfest 2020 repo for fun and games.
+# Hacktoberfest website 🎃
+## Hacktoberfest 2020 repo for fun and games 🎃
 
 Visit https://matteomessmer.github.io/hacktoberfest/
 
