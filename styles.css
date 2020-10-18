@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2rem;
+    color: #2a425a;
+}
+
+#osmMap {
+    height: calc(100vh - 90px);
+    width: calc(100vw - 20px);
+    margin: auto;
+    border: 2px solid darkgrey;
+}
+
+
+.olControlZoom {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 0 10px;
+}
+
+.olControlZoom .olButton {
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.olControlZoom .olButton::selection,
+.olControlZoom .olButton:active{
+    transform: scale(1.1);
+    background: #f4f4f4;
+}
+
+.olControlAttribution {
+    display: none;
+}
