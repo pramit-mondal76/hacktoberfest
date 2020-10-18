@@ -7,7 +7,6 @@ Visit https://matteomessmer.github.io/hacktoberfest/
 
 # Objective
 I want to make a website with a OSM map to display from where the contributors come.
-To add your position, make a contribution adding your coordinates into [positions.js](js/positions.js)
 
 # How to contribute
 1) Open an issue
@@ -16,7 +15,7 @@ To add your position, make a contribution adding your coordinates into [position
 3) Fork the repo
 4) Make a branch
     - Commit and push the changes
-5) Add yourself in the contributors file
+5) Add yourself in the [contributors file](js/positions.js)
 
 6) Make a pull request
 
