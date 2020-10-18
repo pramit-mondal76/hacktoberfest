@@ -9,21 +9,9 @@
 <body>
 <div class="wrapper">
     <h1>OPEN SOURCE STREET MAP</h1>
-    <div class="switch_box box_1">
-        <input type="checkbox" class="switch_1">
-    </div>
 </div>
 <div id="osmMap"></div>
 <script src="js/OpenLayers.js"></script>
-<script src="js/themeToggle.js"></script>
-<script>
-    function onResize() {
-        const height = document.querySelector('.wrapper').clientHeight + 20;
-        document.querySelector('#osmMap').style.height = `calc(100% - ${height}px)`;
-    }
-    onResize();
-    window.addEventListener('resize', onResize);
-</script>
 <script>
     map = new OpenLayers.Map("osmMap");
     map.addLayer(new OpenLayers.Layer.OSM());
