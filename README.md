@@ -15,6 +15,8 @@ I want to make a website with a OSM map to display from where the contributors c
 3) Fork the repo
 4) Make a branch 
     - Commit and push the changes
-5) Make a pull request
+5) Add yourself in the contributors file
+
+6) Make a pull request
 
 Feel free to contribute to this repo. 
