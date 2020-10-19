@@ -35,13 +35,13 @@
     const arr = (positions || []);
     var size = new OpenLayers.Size(25,25);
     var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
-    var icon = new OpenLayers.Icon('/img/marker.png', size, offset);
+    var icon = new OpenLayers.Icon('img/marker.png', size, offset);
     for (let i = 0; i < arr.length; i++) {
         const position = new OpenLayers.LonLat(arr[i].lng, arr[i].lat).transform(
             new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
             map.getProjectionObject() // to Spherical Mercator Projection
         );
-        const marker = new OpenLayers.Marker(position, icon);
+        const marker = new OpenLayers.Marker(position, icon.clone());
         markers.addMarker(marker);
     }
 </script>
