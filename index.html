@@ -32,7 +32,6 @@
     for (let i = 0; i < arr.length; i++) {
       markers.push(new ol.Feature({
           geometry: new ol.geom.Point(ol.proj.fromLonLat([arr[i].lng, arr[i].lat])),
-          
         })
       );
     }
