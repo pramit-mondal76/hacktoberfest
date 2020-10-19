@@ -24,6 +24,7 @@
         document.querySelector('#osmMap').style.height = `calc(100% - ${height}px)`;
     }
     onResize();
+    const marker = document.getElementById('#marker');
     window.addEventListener('resize', onResize);
 	
     const markers = [];
@@ -36,13 +37,15 @@
       );
     }
 
+    var size = ol.size.toSize([2048,2048]);	
+    var scale = ol.size.toSize([.015,.015]);	
+    var icon = new ol.style.Icon({
+      src: 'img/marker.png', 
+      size, 
+      scale
+    });
     const style = new ol.style.Style({
-      image: new ol.style.Circle({
-        radius: 5,
-        fill: new ol.style.Fill({
-          color: 'red',
-        }),
-      })
+      image: icon,
     }) 
 
     map = new ol.Map({
@@ -55,7 +58,7 @@
           source: new ol.source.Vector({
             features: markers
           }),
-          style:  style
+          style
         })       
       ],
       view: new ol.View({
