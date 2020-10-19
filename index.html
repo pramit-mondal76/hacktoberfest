@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hacktoberfest 2020</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/css/ol.css">
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/build/ol.js"></script>
 </head>
 <body>
 <div class="wrapper">
@@ -14,7 +16,6 @@
     </div>
 </div>
 <div id="osmMap"></div>
-<script src="js/OpenLayers.js"></script>
 <script src="js/positions.js"></script>
 <script src="js/themeToggle.js"></script>
 <script>
@@ -25,25 +26,43 @@
     onResize();
     window.addEventListener('resize', onResize);
 	
-    map = new OpenLayers.Map("osmMap");
-    map.addLayer(new OpenLayers.Layer.OSM());
-    map.zoomToMaxExtent();
-
-    markers = new OpenLayers.Layer.Markers("Markers");
-    map.addLayer(markers);
-
+    const markers = [];
     const arr = (positions || []);
-    var size = new OpenLayers.Size(25,25);
-    var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
-    var icon = new OpenLayers.Icon('/img/marker.png', size, offset);
     for (let i = 0; i < arr.length; i++) {
-        const position = new OpenLayers.LonLat(arr[i].lng, arr[i].lat).transform(
-            new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
-            map.getProjectionObject() // to Spherical Mercator Projection
-        );
-        const marker = new OpenLayers.Marker(position, icon);
-        markers.addMarker(marker);
+      markers.push(new ol.Feature({
+          geometry: new ol.geom.Point(ol.proj.fromLonLat([arr[i].lng, arr[i].lat])),
+          
+        })
+      );
     }
+
+    const style = new ol.style.Style({
+      image: new ol.style.Circle({
+        radius: 5,
+        fill: new ol.style.Fill({
+          color: 'red',
+        }),
+      })
+    }) 
+
+    map = new ol.Map({
+      target: 'osmMap',
+      layers: [
+        new ol.layer.Tile({
+          source: new ol.source.OSM()
+        }),
+        new ol.layer.Vector({
+          source: new ol.source.Vector({
+            features: markers
+          }),
+          style:  style
+        })       
+      ],
+      view: new ol.View({
+        center: ol.proj.fromLonLat([20.41, 8.82]),
+        zoom: 1
+      })
+    });
 </script>
 </body>
 </html>
