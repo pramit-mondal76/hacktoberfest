@@ -1,7 +1,9 @@
 // This file include name and place of Contributors.
 // Please write your name and coordinates in the give format
-// { lat: ?, lng: ? }, // github.com/my_github_id
+// { name:'<github id>', lat: ?, lng: ? }, 
 
 var positions = [
-  { lat: -19.915535, lng: -43.967633 }, // github.com/tchesa
+		{ name:'tchesa', lat: -19.915535, lng: -43.967633 }, 
+		{ name:'matteomessmer', lat: 41.2925, lng: 12.5736 },
+		{ name:'harsh863', lat: 28.667856, lng: 77.449791 },
 ]
