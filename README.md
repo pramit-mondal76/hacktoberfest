@@ -19,4 +19,7 @@ I want to make a website with a OSM map to display from where the contributors c
 
 6) Make a pull request
 
+# Want to add a new functionality?
+That's cool! Just create a new issue: remember to keep it simple! Then if it is interesting you can work on it and submit a Pull Request.
+
 Feel free to contribute to this repo.
