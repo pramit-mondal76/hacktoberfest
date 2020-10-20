@@ -1,70 +1,78 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Hacktoberfest 2020</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/css/ol.css">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/css/ol.css"
+    />
     <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/build/ol.js"></script>
-</head>
-<body>
-<div class="wrapper">
-    <h1>OPEN SOURCE STREET MAP</h1>
-    <div class="switch_box box_1">
-        <input type="checkbox" class="switch_1">
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>OPEN SOURCE STREET MAP</h1>
+      <div class="switch_box box_1">
+        <input type="checkbox" class="switch_1" />
+      </div>
     </div>
-</div>
-<div id="osmMap"></div>
-<script src="js/positions.js"></script>
-<script src="js/themeToggle.js"></script>
-<script>
-    function onResize() {
-        const height = document.querySelector('.wrapper').clientHeight + 20;
-        document.querySelector('#osmMap').style.height = `calc(100% - ${height}px)`;
-    }
-    onResize();
-    const marker = document.getElementById('#marker');
-    window.addEventListener('resize', onResize);
-	
-    const markers = [];
-    const arr = (positions || []);
-    for (let i = 0; i < arr.length; i++) {
-      markers.push(new ol.Feature({
-          geometry: new ol.geom.Point(ol.proj.fromLonLat([arr[i].lng, arr[i].lat])),
-        })
-      );
-    }
+    <div id="osmMap"></div>
+    <script src="js/positions.js"></script>
+    <script src="js/themeToggle.js"></script>
+    <script>
+      function onResize() {
+        const height = document.querySelector(".wrapper").clientHeight + 20;
+        document.querySelector(
+          "#osmMap"
+        ).style.height = `calc(100% - ${height}px)`;
+      }
+      onResize();
+      const marker = document.getElementById("#marker");
+      window.addEventListener("resize", onResize);
 
-    var size = ol.size.toSize([2048,2048]);	
-    var scale = ol.size.toSize([.015,.015]);	
-    var icon = new ol.style.Icon({
-      src: 'img/marker.png', 
-      size, 
-      scale
-    });
-    const style = new ol.style.Style({
-      image: icon,
-    }) 
+      const markers = [];
+      const arr = positions || [];
+      for (let i = 0; i < arr.length; i++) {
+        markers.push(
+          new ol.Feature({
+            geometry: new ol.geom.Point(
+              ol.proj.fromLonLat([arr[i].lng, arr[i].lat])
+            ),
+          })
+        );
+      }
 
-    map = new ol.Map({
-      target: 'osmMap',
-      layers: [
-        new ol.layer.Tile({
-          source: new ol.source.OSM()
-        }),
-        new ol.layer.Vector({
-          source: new ol.source.Vector({
-            features: markers
+      var size = ol.size.toSize([2048, 2048]);
+      var scale = ol.size.toSize([0.015, 0.015]);
+      var icon = new ol.style.Icon({
+        src: "img/marker.png",
+        size,
+        scale,
+      });
+      const style = new ol.style.Style({
+        image: icon,
+      });
+
+      map = new ol.Map({
+        target: "osmMap",
+        layers: [
+          new ol.layer.Tile({
+            source: new ol.source.OSM(),
           }),
-          style
-        })       
-      ],
-      view: new ol.View({
-        center: ol.proj.fromLonLat([20.41, 8.82]),
-        zoom: 1
-      })
-    });
-</script>
-</body>
+          new ol.layer.Vector({
+            source: new ol.source.Vector({
+              features: markers,
+            }),
+            style,
+          }),
+        ],
+        view: new ol.View({
+          center: ol.proj.fromLonLat([20.41, 8.82]),
+          zoom: 1,
+        }),
+      });
+    </script>
+  </body>
 </html>
