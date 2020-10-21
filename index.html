@@ -40,20 +40,48 @@
             geometry: new ol.geom.Point(
               ol.proj.fromLonLat([arr[i].lng, arr[i].lat])
             ),
+            name : arr[i].name,
           })
         );
       }
 
       var size = ol.size.toSize([2048, 2048]);
-      var scale = ol.size.toSize([0.015, 0.015]);
+      var scale = ol.size.toSize([0.05, 0.05]);
+      for(let i=0; i<arr.length; i++){
+        let xyz = arr[i].name;
+        markers[i].setStyle(
+          new ol.style.Style({
+            image: new ol.style.Icon({
+              anchor: [0.1, 0.1],
+              anchorXUnits: 'fraction',
+              anchorYUnits: 'fraction',
+              src: "https://github.com/"+xyz+".png",
+              size,
+              scale,
+            }),
+            text: new ol.style.Text({
+              text: xyz,
+              offsetY: 12,
+              scale: [1,1],
+              textAlign: 'center',
+              textBaseline: 'top',
+            })  
+          })
+        );
+      }
+
+      /*
+      var size = ol.size.toSize([2048, 2048]);
+      var scale = ol.size.toSize([0.030, 0.030]);
       var icon = new ol.style.Icon({
-        src: "img/marker.png",
+        src: "https://github.com/himanshupawar-10.png",
         size,
         scale,
       });
       const style = new ol.style.Style({
         image: icon,
-      });
+      }); 
+      */
 
       map = new ol.Map({
         target: "osmMap",
@@ -65,7 +93,7 @@
             source: new ol.source.Vector({
               features: markers,
             }),
-            style,
+            //style,
           }),
         ],
         view: new ol.View({
