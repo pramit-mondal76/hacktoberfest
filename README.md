@@ -3,7 +3,7 @@
 
 Visit https://matteomessmer.github.io/hacktoberfest/
 
-![Image of Hacktoberfest](https://repository-images.githubusercontent.com/200877850/a3998700-e181-11ea-86c2-0bff8811ded4)
+![hacktoberfest](https://user-images.githubusercontent.com/60233336/97103058-4dd8e200-16d0-11eb-94f4-39c7c95b852b.png)
 
 # Objective
 I want to make a website with a OSM map to display from where the contributors come.
