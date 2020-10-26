@@ -14,6 +14,7 @@
   <body>
     <div class="wrapper">
       <h1>OPEN SOURCE STREET MAP</h1>
+      <a href="./weather.html"><h3>Weather Details</h3></a>
       <div class="switch_box box_1">
         <input type="checkbox" class="switch_1" />
       </div>
@@ -40,32 +41,32 @@
             geometry: new ol.geom.Point(
               ol.proj.fromLonLat([arr[i].lng, arr[i].lat])
             ),
-            name : arr[i].name,
+            name: arr[i].name,
           })
         );
       }
 
       var size = ol.size.toSize([2048, 2048]);
       var scale = ol.size.toSize([0.05, 0.05]);
-      for(let i=0; i<arr.length; i++){
+      for (let i = 0; i < arr.length; i++) {
         let xyz = arr[i].name;
         markers[i].setStyle(
           new ol.style.Style({
             image: new ol.style.Icon({
               anchor: [0.1, 0.1],
-              anchorXUnits: 'fraction',
-              anchorYUnits: 'fraction',
-              src: "https://github.com/"+xyz+".png",
+              anchorXUnits: "fraction",
+              anchorYUnits: "fraction",
+              src: "https://github.com/" + xyz + ".png",
               size,
               scale,
             }),
             text: new ol.style.Text({
               text: xyz,
               offsetY: 12,
-              scale: [1,1],
-              textAlign: 'center',
-              textBaseline: 'top',
-            })  
+              scale: [1, 1],
+              textAlign: "center",
+              textBaseline: "top",
+            }),
           })
         );
       }
