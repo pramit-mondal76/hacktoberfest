@@ -25,6 +25,12 @@ h1 {
   color: #ff7746;
 }
 
+h3 {
+  text-decoration: none;
+  font-family: "Quicksand", sans-serif;
+
+  color: #ff7746;
+}
 .switch_box {
   display: -webkit-box;
   display: -ms-flexbox;
