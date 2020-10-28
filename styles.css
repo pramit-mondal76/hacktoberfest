@@ -92,6 +92,11 @@ input[type="checkbox"].switch_1:checked:after {
   border: 2px solid #413478;
   background: #ff7746;
   user-select: none;
+  cursor: grab;
+}
+
+#osmMap:active {
+  cursor: grabbing;
 }
 
 .olControlZoom {
