@@ -10,4 +10,5 @@ var positions = [
   { name: "illusion47586", lat: 28.6227117, lng: -77.0909803 },
   { name: "chiaramistro", lat: 45.639497 , lng: 12.167639 },
   { name: "himanshupawar-10",lat:21.0164829,lng:75.5297378},
+  { name: "Nusart",lat:21.480093,lng:83.983033 },
 ];
