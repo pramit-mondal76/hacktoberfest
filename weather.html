@@ -18,192 +18,52 @@
     />
   </head>
   <body>
+    <div class="notification"></div>
     <div class="details-today">
       <div class="location-and-image">
-        Berlin,
-        <br />
-        Germany
-        <img class="today-card-img" src="assets/icons/png/chancerain.png" />
-        <span
-          ><img
-            class="max-min-today"
-            src="./assets/weather-today/up.png"
-            alt=""
-          />32° C
-          <img
-            class="max-min-today"
-            src="./assets/weather-today/down.png"
-            alt=""
-          />19° C</span
-        >
+        <div class="location">
+        </div>
+        <div class="today-icon">
+        <img class="today-card-img" src="assets/icons/nt_unknown.png" /></div>
+        <div class="desc"></div>
+        <span class="today-min-max"></span>
       </div>
 
-      <div class="curr-temp">24° C</div>
+      <div class="curr-temp">° C</div>
 
       <div class="date-column">
-        <h2>17th March</h2>
-        <h4>Tuesday</h4>
-        <br /><br /><br />
+        <div class="day-date"></div>
+        <br /><br /><br /><br />
         <div class="parameters-today">
           Humidity
           <img
             class="humidity-icon"
             src="./assets/weather-today/humidity.png"
             alt=""
-          />: 69%
+          />:
+          <span class="humidity"></span>
           <br />
           Wind
           <img
             class="wind-icon"
             src="./assets/weather-today/wind.png"
             alt=""
-          />: 6 km/hr
+          />:
+          <span class="wind"></span>
           <br />
           Precipitation
           <img
             class="precipitation-icon"
             src="./assets/weather-today/rain.png"
             alt=""
-          />: 27%
+          />:
+          <span class="precipitation"></span>
         </div>
       </div>
     </div>
 
     <div class="weather-today"></div>
-    <div class="container">
-      <div class="day">
-        <div class="day-name">MONDAY</div>
-        <img
-          class="weekday-card-icon"
-          src="./assets/icons/png/chancesnow.png"
-          alt=""
-        /><br />
-        <div class="max">
-          <img class="max-min" src="./assets/weather-today/up.png" alt="" />32°
-          C
-        </div>
-        <div class="min">
-          <img
-            class="max-min"
-            src="./assets/weather-today/down.png"
-            alt=""
-          />19° C
-        </div>
-      </div>
-      <div class="day">
-        <div class="day-name">TUESDAY</div>
-        <img
-          class="weekday-card-icon"
-          src="./assets/icons/png/clear.png"
-          alt=""
-        /><br />
-        <div class="max">
-          <img class="max-min" src="./assets/weather-today/up.png" alt="" />32°
-          C
-        </div>
-        <div class="min">
-          <img
-            class="max-min"
-            src="./assets/weather-today/down.png"
-            alt=""
-          />19° C
-        </div>
-      </div>
-      <div class="day">
-        <div class="day-name">WEDNESDAY</div>
-        <img
-          class="weekday-card-icon"
-          src="./assets/icons/png/fog.png"
-          alt=""
-        /><br />
-        <div class="max">
-          <img class="max-min" src="./assets/weather-today/up.png" alt="" />32°
-          C
-        </div>
-        <div class="min">
-          <img
-            class="max-min"
-            src="./assets/weather-today/down.png"
-            alt=""
-          />19° C
-        </div>
-      </div>
-      <div class="day">
-        <div class="day-name">THURSDAY</div>
-        <img
-          class="weekday-card-icon"
-          src="./assets/icons/png/partlycloudy.png"
-          alt=""
-        /><br />
-        <div class="max">
-          <img class="max-min" src="./assets/weather-today/up.png" alt="" />32°
-          C
-        </div>
-        <div class="min">
-          <img
-            class="max-min"
-            src="./assets/weather-today/down.png"
-            alt=""
-          />19° C
-        </div>
-      </div>
-      <div class="day">
-        <div class="day-name">FRIDAY</div>
-        <img
-          class="weekday-card-icon"
-          src="./assets/icons/png/flurries.png"
-          alt=""
-        /><br />
-        <div class="max">
-          <img class="max-min" src="./assets/weather-today/up.png" alt="" />32°
-          C
-        </div>
-        <div class="min">
-          <img
-            class="max-min"
-            src="./assets/weather-today/down.png"
-            alt=""
-          />19° C
-        </div>
-      </div>
-      <div class="day">
-        <div class="day-name">SATURDAY</div>
-        <img
-          class="weekday-card-icon"
-          src="./assets/icons/png/chancerain.png"
-          alt=""
-        /><br />
-        <div class="max">
-          <img class="max-min" src="./assets/weather-today/up.png" alt="" />32°
-          C
-        </div>
-        <div class="min">
-          <img
-            class="max-min"
-            src="./assets/weather-today/down.png"
-            alt=""
-          />19° C
-        </div>
-      </div>
-      <div class="day">
-        <div class="day-name">SUNDAY</div>
-        <img
-          class="weekday-card-icon"
-          src="./assets/icons/png/chancetstorms.png"
-          alt=""
-        /><br />
-        <div class="max">
-          <img class="max-min" src="./assets/weather-today/up.png" alt="" />32°
-          C
-        </div>
-        <div class="min">
-          <img
-            class="max-min"
-            src="./assets/weather-today/down.png"
-            alt=""
-          />19° C
-        </div>
-      </div>
-    </div>
+    <div class="container"></div>
+    <script src="./js/weather.js"></script>
   </body>
 </html>
