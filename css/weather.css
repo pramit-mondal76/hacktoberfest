@@ -1,138 +1,151 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 .Horizontal-background-of-the-night-starry-sky-1-hex {
-  color: #010a26;
+    color: #010a26;
 }
 .Horizontal-background-of-the-night-starry-sky-2-hex {
-  color: #011640;
+    color: #011640;
 }
 .Horizontal-background-of-the-night-starry-sky-3-hex {
-  color: #023373;
+    color: #023373;
 }
 .Horizontal-background-of-the-night-starry-sky-4-hex {
-  color: #0367a6;
+    color: #0367a6;
 }
 .Horizontal-background-of-the-night-starry-sky-5-hex {
-  color: #0378a6;
+    color: #0378a6;
 }
 
 body {
-  background: url("../assets/bgimage.jpg");
-  background-size: cover;
-  width: 100%;
-  color: white;
-  text-align: center;
-  font-family: "Open Sans", sans-serif;
+    background: url("../assets/bgimage.jpg");
+    background-size: cover;
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
 }
 
 .details-today {
-  margin: 50px auto;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: row;
-  border: 1px solid #455066;
-  width: 40%;
-  height: 300px !important;
-  border-radius: 2px;
-  box-shadow: 0 4px 8px 0 #3c4255, 0 6px 6px 0 #455066;
+    margin: 50px auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    border: 1px solid #455066;
+    width: 45%;
+    height: 40% !important;
+    border-radius: 2px;
+    box-shadow: 0 4px 8px 0 #3c4255, 0 6px 6px 0 #455066;
+    padding: 10px 15px 10px 15px;
+    justify-content: space-evenly;
 }
 
 .location-and-image {
-  display: flex;
-  flex-direction: column;
-  width: 35%;
-  height: 100%;
-  align-items: flex-start;
-  text-align: left;
-  font-size: 30px;
-  padding: 10px 0 10px 10px;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+    align-items: flex-start;
+    text-align: left;
+    font-size: 30px;
+    padding: 10px 0 10px 15px;
 }
 
 .today-card-img {
-  width: 120px;
-  height: 120px;
-  margin: 10px;
+    width: 120px !important;
+    height: 120px !important;
+}
+
+.desc {
+    font-size: 20px;
 }
 
 .max-min-today {
-  width: 20px;
-  height: 20px;
-  margin: 10px 2px 10px 0;
+    width: 20px;
+    height: 20px;
+    margin: 10px 2px 10px 0;
 }
 
 .date-column {
-  display: flex;
-  flex-direction: column;
-  width: 40%;
-  height: 100%;
-  align-items: flex-end;
-  text-align: left;
-  font-size: 22px;
-  padding: 13px 10px 10px 0;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+    text-align: right;
+    font-size: 22px;
+    justify-content: space-between;
+}
+
+.parameters-today {
+    align-self: flex-end !important;
+}
+
+.day-date {
+    text-align: right;
+    right: 0;
 }
 
 .humidity-icon,
 .wind-icon,
 .precipitation-icon {
-  width: 25px;
-  height: 25px;
-  color: white;
-  margin-right: 5px;
+    width: 25px;
+    height: 25px;
+    color: white;
+    margin-right: 5px;
 }
 
 .curr-temp {
-  font-size: 60px;
-  padding: 0;
-  align-self: center;
-  margin-bottom: 20px;
+    font-size: 60px;
+    padding: 0;
+    align-self: center;
+    margin-bottom: 20px;
 }
 
 .container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
 }
 
 .day {
-  min-width: 15% !important;
-  color: #010a26;
-  height: 40%;
-  background: #fff;
-  border-radius: 2px;
-  margin: 10px;
-  box-shadow: 0 4px 8px 0 #384057, 0 6px 6px 0 #455066;
-  padding: 0;
+    min-width: 15% !important;
+    color: #010a26;
+    height: 40%;
+    background: #fff;
+    border-radius: 2px;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 #384057, 0 6px 6px 0 #455066;
+    padding: 0;
 }
 
 .weekday-card-icon {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 10px;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
 }
 
 .day-name {
-  background-color: #84c1da;
-  padding: 5px 0;
+    background-color: #84c1da;
+    padding: 5px 0;
 }
 
 .max-min {
-  width: 20px;
-  height: 20px;
-  margin: 5px 3px 5px 3px;
+    width: 20px;
+    height: 20px;
+    margin: 5px 3px 5px 3px;
 }
 
 .max {
-  background-color: #b0c0d6;
-  padding: 5px 0;
+    background-color: #b0c0d6;
+    padding: 5px 0;
 }
 .min {
-  background-color: #b0c0d6;
-  padding: 5px 0;
+    background-color: #b0c0d6;
+    padding: 5px 0;
 }
 
 .max:hover,
 .min:hover {
-  background-color: #7e8497;
-  transform: scale(1.01);
+    background-color: #7e8497;
+    transform: scale(1.01);
 }
