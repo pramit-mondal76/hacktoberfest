@@ -96,7 +96,7 @@ function displayWeather() {
     humidityElement.innerHTML = `${weather.humidity} %`;
     windSpeedElement.innerHTML = `${weather.windSpeed} m/sec`;
     precipitationElement.innerHTML = `${weather.precipitation} %`;
-    dayDateElement.innerHTML = `<h4>${new Date().getDay()} ${month} ${new Date().getFullYear()}</h4><h2>${day}</h2>`;
+    dayDateElement.innerHTML = `<h4>${new Date().getDate()} ${month} ${new Date().getFullYear()}</h4><h2>${day}</h2>`;
     todayMinMaxElement.innerHTML = `<img
     class="max-min-today"
     src="./assets/weather-today/up.png"
