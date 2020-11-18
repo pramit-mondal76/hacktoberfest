@@ -32,6 +32,7 @@ body {
     flex-direction: row;
     border: 1px solid #455066;
     width: 45%;
+    min-width:450px;
     height: 40% !important;
     border-radius: 2px;
     box-shadow: 0 4px 8px 0 #3c4255, 0 6px 6px 0 #455066;
