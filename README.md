@@ -1,12 +1,12 @@
 # Hacktoberfest website 🎃
-## Hacktoberfest 2020 repo for fun and games 🎃
+## Hacktoberfest 2022 repo for fun and games 🎃
 
 Visit https://matteomessmer.github.io/hacktoberfest/
 
-![hacktoberfest](https://user-images.githubusercontent.com/60233336/97103058-4dd8e200-16d0-11eb-94f4-39c7c95b852b.png)
+![hacktoberfest](https://user-images.githubusercontent.com/40521259/190178633-18f63e6f-654f-41fa-ae48-a10007f5885d.png)
 
 # Objective
-I want to make a website with a OSM map to display from where the contributors come.
+I want to create an useful website with an OSM map to display from where the contributors come.
 
 # How to contribute
 1) Open an issue
