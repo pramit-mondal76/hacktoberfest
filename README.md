@@ -9,4 +9,4 @@ Visit https://matteomessmer.github.io/hacktoberfest/
 I want to create an useful website with an OSM map to display from where the contributors come.
 
 # How to contribute?
-[contributors file](CONTRIBUTING.md)
+Read [CCONTRIBUTING.md](CONTRIBUTING.md)
